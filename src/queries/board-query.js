@@ -1,0 +1,6 @@
+exports.getBoard = 'SELECT * FROM board_table'
+exports.readBoard = 'SELECT * FROM board_table where id = ?'
+// exports.getBoards = 'select board_id, title from board limit ?, ?'
+exports.insertBoard = 'insert into board_table(title, author, content) values(?, ?, ?)'
+exports.updateBoard = 'update board_table set id = ?, title = ?, author = ?, content = ? where id=?'
+exports.deleteBoard = 'delete from board_table where id = ?'

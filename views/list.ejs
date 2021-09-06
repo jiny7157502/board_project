@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>hi</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<h1><%= title %></h1>
+<a href="/board/write">글쓰기</a>
+<table border="1">
+  <tr>
+    <td>번호</td>
+    <td>제목</td>
+    <td>작성자</td>
+    <td>내용</td>
+  </tr>
+  <%
+  for(var i=0; i<rows.length; i++) {
+  %>
+  <tr>
+    <td><%=rows[i].id%></td>
+    <td><a href="/board/read/<%=rows[i].id%>"><%=rows[i].title%></td>
+    <td><%=rows[i].author%></td>
+    <td><%=rows[i].content%></td>
+  </tr>
+  <% } %>
+</table>
+</body>
+</html>
